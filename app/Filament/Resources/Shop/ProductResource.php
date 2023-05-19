@@ -109,7 +109,8 @@ class ProductResource extends Resource
                                     ->required(),
 
                                 Forms\Components\TextInput::make('security_stock')
-                                    ->helperText('The safety stock is the limit stock for your products which alerts you if the product stock will soon be out of stock.')
+                                    ->label("Безопасен запас")
+                                    ->helperText('Безопасният запас е лимитът на склад за вашите продукти, който ви предупреждава, ако складът на продукта скоро ще бъде изчерпан.')
                                     ->numeric()
                                     ->rules(['integer', 'min:0'])
                                     ->required(),
@@ -198,6 +199,7 @@ class ProductResource extends Resource
                     ->toggleable(),
 
                 Tables\Columns\TextColumn::make('security_stock')
+                    ->label("Безопасен запас")
                     ->searchable()
                     ->sortable()
                     ->toggleable()
