@@ -6,6 +6,7 @@
     'label' => null,
 ])
 
+@if ($label === 'Shop')
 <li
     x-data="{ label: {{ \Illuminate\Support\Js::from((filled($parentGroup) ? "{$parentGroup}." : null) . $label) }} }"
     class="filament-sidebar-group"
@@ -32,7 +33,7 @@
                 @endif
 
                 <p class="flex-1 font-bold uppercase text-xs tracking-wider">
-                    {{ $label }}
+                    {{ "Магазин" }}
                 </p>
             </div>
 
@@ -54,27 +55,35 @@
         ])
     >
         @foreach ($items as $item)
-            @if ($item instanceof \Filament\Navigation\NavigationItem)
-                <x-filament::layouts.app.sidebar.item
-                    :active="$item->isActive()"
-                    :icon="$item->getIcon()"
-                    :active-icon="$item->getActiveIcon()"
-                    :url="$item->getUrl()"
-                    :badge="$item->getBadge()"
-                    :badgeColor="$item->getBadgeColor()"
-                    :shouldOpenUrlInNewTab="$item->shouldOpenUrlInNewTab()"
-                >
-                    {{ $item->getLabel() }}
-                </x-filament::layouts.app.sidebar.item>
-            @elseif ($item instanceof \Filament\Navigation\NavigationGroup)
-                <x-filament::layouts.app.sidebar.group
-                    :label="$item->getLabel()"
-                    :icon="$item->getIcon()"
-                    :collapsible="$item->isCollapsible()"
-                    :items="$item->getItems()"
-                    :parentGroup="(filled($parentGroup) ? ('$parentGroup' . '.') : null) . $label"
-                />
+        @if ($item instanceof \Filament\Navigation\NavigationItem)
+    @if ($item->getLabel() === 'Products' || $item->getLabel() === 'Categories')
+        <x-filament::layouts.app.sidebar.item
+            :active="$item->isActive()"
+            :icon="$item->getIcon()"
+            :active-icon="$item->getActiveIcon()"
+            :url="$item->getUrl()"
+            :badge="$item->getBadge()"
+            :badgeColor="$item->getBadgeColor()"
+            :shouldOpenUrlInNewTab="$item->shouldOpenUrlInNewTab()"
+        >
+            @if ($item->getLabel() === 'Products')
+                {{ __('Продукти') }}
+            @elseif ($item->getLabel() === 'Categories')
+                {{ __('Категории') }}
             @endif
+        </x-filament::layouts.app.sidebar.item>
+    @endif
+@elseif ($item instanceof \Filament\Navigation\NavigationGroup)
+    <x-filament::layouts.app.sidebar.group
+        :label="$item->getLabel()"
+        :icon="$item->getIcon()"
+        :collapsible="$item->isCollapsible()"
+        :items="$item->getItems()"
+        :parentGroup="(filled($parentGroup) ? ('$parentGroup' . '.') : null) . $label"
+    />
+@endif
+
         @endforeach
     </ul>
 </li>
+@endif
