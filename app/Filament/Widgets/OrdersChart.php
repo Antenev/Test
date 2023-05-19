@@ -6,7 +6,7 @@ use Filament\Widgets\LineChartWidget;
 
 class OrdersChart extends LineChartWidget
 {
-    protected static ?string $heading = 'Orders per month';
+    protected static ?string $heading = 'Месечни поръчки';
 
     protected static ?int $sort = 1;
 
@@ -15,7 +15,7 @@ class OrdersChart extends LineChartWidget
         return [
             'datasets' => [
                 [
-                    'label' => 'Orders',
+                    'label' => 'Поръчки',
                     'data' => [2433, 3454, 4566, 2342, 5545, 5765, 6787, 8767, 7565, 8576, 9686, 8996],
                 ],
             ],

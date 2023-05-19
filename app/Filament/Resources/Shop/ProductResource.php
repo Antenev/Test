@@ -41,6 +41,7 @@ class ProductResource extends Resource
                         Forms\Components\Card::make()
                             ->schema([
                                 Forms\Components\TextInput::make('name')
+                                    ->label('Име')
                                     ->required()
                                     ->lazy()
                                     ->afterStateUpdated(fn (string $context, $state, callable $set) => $context === 'create' ? $set('slug', Str::slug($state)) : null),
@@ -115,10 +116,10 @@ class ProductResource extends Resource
                         Forms\Components\Section::make('Shipping')
                             ->schema([
                                 Forms\Components\Checkbox::make('backorder')
-                                    ->label('This product can be returned'),
+                                    ->label('Този продукт може да бъде върнат'),
 
                                 Forms\Components\Checkbox::make('requires_shipping')
-                                    ->label('This product will be shipped'),
+                                    ->label('Този продукт ще бъде изпратен'),
                             ])
                             ->columns(2),
                     ])
@@ -129,7 +130,7 @@ class ProductResource extends Resource
                         Forms\Components\Section::make('Status')
                             ->schema([
                                 Forms\Components\Toggle::make('is_visible')
-                                    ->label('Visible')
+                                    ->label('Видимо')
                                     ->helperText('This product will be hidden from all sales channels.')
                                     ->default(true),
 
@@ -161,21 +162,22 @@ class ProductResource extends Resource
         return $table
             ->columns([
                 Tables\Columns\SpatieMediaLibraryImageColumn::make('product-image')
-                    ->label('Image')
+                    ->label('Снимка')
                     ->collection('product-images'),
 
                 Tables\Columns\TextColumn::make('name')
-                    ->label('Name')
+                    ->label('Име')
                     ->searchable()
                     ->sortable(),
 
                 Tables\Columns\TextColumn::make('brand.name')
+                    ->label("Име на бранда")
                     ->searchable()
                     ->sortable()
                     ->toggleable(),
 
                 Tables\Columns\TextColumn::make('price')
-                    ->label('Price')
+                    ->label('Цена')
                     ->searchable()
                     ->sortable(),
 
@@ -185,6 +187,7 @@ class ProductResource extends Resource
                     ->toggleable(),
 
                 Tables\Columns\TextColumn::make('qty')
+                    ->label("Количество")
                     ->searchable()
                     ->sortable()
                     ->toggleable(),
@@ -196,12 +199,12 @@ class ProductResource extends Resource
                     ->toggledHiddenByDefault(),
 
                 Tables\Columns\BooleanColumn::make('is_visible')
-                    ->label('Visibility')
+                    ->label('Видимост')
                     ->sortable()
                     ->toggleable(),
 
                 Tables\Columns\TextColumn::make('published_at')
-                    ->label('Publish Date')
+                    ->label('Дата на публикуване')
                     ->date()
                     ->sortable()
                     ->toggleable()

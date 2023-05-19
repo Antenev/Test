@@ -6,7 +6,7 @@ use Filament\Widgets\LineChartWidget;
 
 class CustomersChart extends LineChartWidget
 {
-    protected static ?string $heading = 'Total customers';
+    protected static ?string $heading = 'Общо брой клиенти';
 
     protected static ?int $sort = 2;
 
@@ -15,7 +15,7 @@ class CustomersChart extends LineChartWidget
         return [
             'datasets' => [
                 [
-                    'label' => 'Customers',
+                    'label' => 'Клиенти',
                     'data' => [4344, 5676, 6798, 7890, 8987, 9388, 10343, 10524, 13664, 14345, 15753],
                 ],
             ],
