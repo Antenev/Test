@@ -4,16 +4,16 @@ return [
 
     'single' => [
 
-        'label' => 'Delete',
+        'label' => 'Изтрий',
 
         'modal' => [
 
-            'heading' => 'Delete :label',
+            'heading' => 'Изтрий :label',
 
             'actions' => [
 
                 'delete' => [
-                    'label' => 'Delete',
+                    'label' => 'Изтрий',
                 ],
 
             ],
@@ -21,23 +21,23 @@ return [
         ],
 
         'messages' => [
-            'deleted' => 'Deleted',
+            'deleted' => 'Изтрито',
         ],
 
     ],
 
     'multiple' => [
 
-        'label' => 'Delete selected',
+        'label' => 'Изтрий избраните',
 
         'modal' => [
 
-            'heading' => 'Delete selected :label',
+            'heading' => 'Изтрий избраните :label',
 
             'actions' => [
 
                 'delete' => [
-                    'label' => 'Delete',
+                    'label' => 'Изтрий',
                 ],
 
             ],
@@ -45,7 +45,7 @@ return [
         ],
 
         'messages' => [
-            'deleted' => 'Deleted',
+            'deleted' => 'Изтрито',
         ],
 
     ],

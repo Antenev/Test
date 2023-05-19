@@ -52,6 +52,7 @@ class ProductResource extends Resource
                                     ->unique(Product::class, 'slug', ignoreRecord: true),
 
                                 Forms\Components\MarkdownEditor::make('description')
+                                    ->label("Описание")
                                     ->columnSpan('full'),
                             ])
                             ->columns(2),
@@ -64,24 +65,26 @@ class ProductResource extends Resource
                                     ->maxFiles(5)
                                     ->disableLabel(),
                             ])
+                            ->label("Снимки")
                             ->collapsible(),
 
                         Forms\Components\Section::make('Pricing')
                             ->schema([
                                 Forms\Components\TextInput::make('price')
+                                    ->label("Цена")
                                     ->numeric()
                                     ->rules(['regex:/^\d{1,6}(\.\d{0,2})?$/'])
                                     ->required(),
 
                                 Forms\Components\TextInput::make('old_price')
-                                    ->label('Compare at price')
+                                    ->label('Цена за сравнение')
                                     ->numeric()
                                     ->rules(['regex:/^\d{1,6}(\.\d{0,2})?$/'])
                                     ->required(),
 
                                 Forms\Components\TextInput::make('cost')
-                                    ->label('Cost per item')
-                                    ->helperText('Customers won\'t see this price.')
+                                    ->label('Цена на продукт')
+                                    ->helperText('Клиентите не виждат тази цена.')
                                     ->numeric()
                                     ->rules(['regex:/^\d{1,6}(\.\d{0,2})?$/'])
                                     ->required(),
@@ -95,12 +98,12 @@ class ProductResource extends Resource
                                     ->required(),
 
                                 Forms\Components\TextInput::make('barcode')
-                                    ->label('Barcode (ISBN, UPC, GTIN, etc.)')
+                                    ->label('Баркод (ISBN, UPC, GTIN, etc.)')
                                     ->unique(Product::class, 'barcode', ignoreRecord: true)
                                     ->required(),
 
                                 Forms\Components\TextInput::make('qty')
-                                    ->label('Quantity')
+                                    ->label('Количество')
                                     ->numeric()
                                     ->rules(['integer', 'min:0'])
                                     ->required(),
@@ -131,11 +134,11 @@ class ProductResource extends Resource
                             ->schema([
                                 Forms\Components\Toggle::make('is_visible')
                                     ->label('Видимо')
-                                    ->helperText('This product will be hidden from all sales channels.')
+                                    ->helperText('Този продукт ще бъде скрит за всички продажбени канали.')
                                     ->default(true),
 
                                 Forms\Components\DatePicker::make('published_at')
-                                    ->label('Availability')
+                                    ->label('Наличност')
                                     ->default(now())
                                     ->required(),
                             ]),
@@ -143,11 +146,13 @@ class ProductResource extends Resource
                         Forms\Components\Section::make('Associations')
                             ->schema([
                                 Forms\Components\Select::make('shop_brand_id')
+                                    ->label("Бранд")
                                     ->relationship('brand', 'name')
                                     ->searchable()
                                     ->hiddenOn(ProductsRelationManager::class),
 
                                 Forms\Components\MultiSelect::make('categories')
+                                    ->label("Категория")
                                     ->relationship('categories', 'name')
                                     ->required(),
                             ]),

@@ -4,16 +4,16 @@ return [
 
     'single' => [
 
-        'label' => 'Edit',
+        'label' => 'Редактирай',
 
         'modal' => [
 
-            'heading' => 'Edit :label',
+            'heading' => 'Редактирай :label',
 
             'actions' => [
 
                 'save' => [
-                    'label' => 'Save changes',
+                    'label' => 'Запази промените',
                 ],
 
             ],
@@ -21,7 +21,7 @@ return [
         ],
 
         'messages' => [
-            'saved' => 'Saved',
+            'saved' => 'Запазено',
         ],
 
     ],

@@ -4,16 +4,16 @@ return [
 
     'single' => [
 
-        'label' => 'Force delete',
+        'label' => 'Принудително изтриване',
 
         'modal' => [
 
-            'heading' => 'Force delete :label',
+            'heading' => 'Принудително изтриване :label',
 
             'actions' => [
 
                 'delete' => [
-                    'label' => 'Delete',
+                    'label' => 'Изтрий',
                 ],
 
             ],
@@ -21,23 +21,23 @@ return [
         ],
 
         'messages' => [
-            'deleted' => 'Deleted',
+            'deleted' => 'Изтрито',
         ],
 
     ],
 
     'multiple' => [
 
-        'label' => 'Force delete selected',
+        'label' => 'Принудително изтриване избрано',
 
         'modal' => [
 
-            'heading' => 'Force delete selected :label',
+            'heading' => 'Принудително изтриване избрано :label',
 
             'actions' => [
 
                 'delete' => [
-                    'label' => 'Delete',
+                    'label' => 'Изтрий',
                 ],
 
             ],

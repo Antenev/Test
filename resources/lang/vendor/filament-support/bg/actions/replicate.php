@@ -4,16 +4,16 @@ return [
 
     'single' => [
 
-        'label' => 'Replicate',
+        'label' => 'Дублирай',
 
         'modal' => [
 
-            'heading' => 'Replicate :label',
+            'heading' => 'Дублирай :label',
 
             'actions' => [
 
                 'replicate' => [
-                    'label' => 'Replicate',
+                    'label' => 'Дублирай',
                 ],
 
             ],
@@ -21,7 +21,7 @@ return [
         ],
 
         'messages' => [
-            'replicated' => 'Replicated',
+            'replicated' => 'Дублирано',
         ],
 
     ],

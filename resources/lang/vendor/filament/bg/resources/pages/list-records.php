@@ -2,6 +2,6 @@
 
 return [
 
-    'breadcrumb' => 'Списък',
+    'breadcrumb' => 'Продукти',
 
 ];

@@ -36,18 +36,22 @@ class CustomerResource extends Resource
                 Forms\Components\Card::make()
                     ->schema([
                         Forms\Components\TextInput::make('name')
+                            ->label("Име")
                             ->maxValue(50)
                             ->required(),
 
                         Forms\Components\TextInput::make('email')
+                            ->label("Имейл адрес")
                             ->required()
                             ->email()
                             ->unique(ignoreRecord: true),
 
                         Forms\Components\TextInput::make('phone')
+                            ->label("Телефонен номер")
                             ->maxValue(50),
 
                         Forms\Components\DatePicker::make('birthday')
+                            ->label("Дата на раждане")
                             ->maxDate('today'),
                     ])
                     ->columns(2)
@@ -56,11 +60,11 @@ class CustomerResource extends Resource
                 Forms\Components\Card::make()
                     ->schema([
                         Forms\Components\Placeholder::make('created_at')
-                            ->label('Created at')
+                            ->label('Създадено на')
                             ->content(fn (Customer $record): ?string => $record->created_at?->diffForHumans()),
 
                         Forms\Components\Placeholder::make('updated_at')
-                            ->label('Last modified at')
+                            ->label('Последно променено на')
                             ->content(fn (Customer $record): ?string => $record->updated_at?->diffForHumans()),
                     ])
                     ->columnSpan(['lg' => 1])
@@ -74,14 +78,18 @@ class CustomerResource extends Resource
         return $table
             ->columns([
                 Tables\Columns\TextColumn::make('name')
+                    ->label("Име")
                     ->searchable(isIndividual: true)
                     ->sortable(),
                 Tables\Columns\TextColumn::make('email')
+                    ->label("Имейл адрес")
                     ->searchable(isIndividual: true, isGlobal: false)
                     ->sortable(),
                 Tables\Columns\TextColumn::make('country')
+                    ->label("Държава")
                     ->getStateUsing(fn ($record): ?string => Country::find($record->addresses->first()?->country)?->name ?? null),
                 Tables\Columns\TextColumn::make('phone')
+                    ->label("Телефонен номер")
                     ->searchable()
                     ->sortable(),
             ])

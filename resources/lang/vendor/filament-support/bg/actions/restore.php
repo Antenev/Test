@@ -4,16 +4,16 @@ return [
 
     'single' => [
 
-        'label' => 'Restore',
+        'label' => 'Възобнови',
 
         'modal' => [
 
-            'heading' => 'Restore :label',
+            'heading' => 'Възобнови :label',
 
             'actions' => [
 
                 'restore' => [
-                    'label' => 'Restore',
+                    'label' => 'Възобнови',
                 ],
 
             ],
@@ -21,23 +21,23 @@ return [
         ],
 
         'messages' => [
-            'restored' => 'Restored',
+            'restored' => 'Възобновено',
         ],
 
     ],
 
     'multiple' => [
 
-        'label' => 'Restore selected',
+        'label' => 'Възобнови избраните',
 
         'modal' => [
 
-            'heading' => 'Restore selected :label',
+            'heading' => 'Възобнови избраните :label',
 
             'actions' => [
 
                 'restore' => [
-                    'label' => 'Restore',
+                    'label' => 'Възобнови',
                 ],
 
             ],
@@ -45,7 +45,7 @@ return [
         ],
 
         'messages' => [
-            'restored' => 'Restored',
+            'restored' => 'Възобновено',
         ],
 
     ],

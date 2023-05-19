@@ -52,11 +52,11 @@ class OrderResource extends Resource
                 Forms\Components\Card::make()
                     ->schema([
                         Forms\Components\Placeholder::make('created_at')
-                            ->label('Created at')
+                            ->label('Създаден на')
                             ->content(fn (Order $record): ?string => $record->created_at?->diffForHumans()),
 
                         Forms\Components\Placeholder::make('updated_at')
-                            ->label('Last modified at')
+                            ->label('Последно променен на')
                             ->content(fn (Order $record): ?string => $record->updated_at?->diffForHumans()),
                     ])
                     ->columnSpan(['lg' => 1])
@@ -70,33 +70,38 @@ class OrderResource extends Resource
         return $table
             ->columns([
                 Tables\Columns\TextColumn::make('number')
+                    ->label("Номер")
                     ->searchable()
                     ->sortable(),
                 Tables\Columns\TextColumn::make('customer.name')
+                    ->label("Клиент")
                     ->searchable()
                     ->sortable()
                     ->toggleable(),
                 Tables\Columns\BadgeColumn::make('status')
+                    ->label("Статус")
                     ->colors([
                         'danger' => 'cancelled',
                         'warning' => 'processing',
                         'success' => fn ($state) => in_array($state, ['delivered', 'shipped']),
                     ]),
                 Tables\Columns\TextColumn::make('currency')
+                    ->label("Валута")
                     ->getStateUsing(fn ($record): ?string => Currency::find($record->currency)?->name ?? null)
                     ->searchable()
                     ->sortable()
                     ->toggleable(),
                 Tables\Columns\TextColumn::make('total_price')
+                    ->label("Обща цена")
                     ->searchable()
                     ->sortable(),
                 Tables\Columns\TextColumn::make('shipping_price')
-                    ->label('Shipping cost')
+                    ->label('Цена на доставка')
                     ->searchable()
                     ->sortable()
                     ->toggleable(),
                 Tables\Columns\TextColumn::make('created_at')
-                    ->label('Order Date')
+                    ->label('Дата на създаване')
                     ->date()
                     ->toggleable(),
             ])
