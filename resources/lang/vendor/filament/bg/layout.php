@@ -25,11 +25,11 @@ return [
         'sidebar' => [
 
             'collapse' => [
-                'label' => 'Collapse sidebar',
+                'label' => 'Свиване на страничната лента',
             ],
 
             'expand' => [
-                'label' => 'Expand sidebar',
+                'label' => 'Разширете страничната лента',
             ],
 
         ],

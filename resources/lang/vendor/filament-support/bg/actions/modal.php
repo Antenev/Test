@@ -2,7 +2,7 @@
 
 return [
 
-    'confirmation' => 'Are you sure you would like to do this?',
+    'confirmation' => 'Сигнурни ли сте, че искате да извършите това действие?',
 
     'actions' => [
 

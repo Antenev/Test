@@ -33,9 +33,9 @@ return [
 
     'pagination' => [
 
-        'label' => 'Pagination Navigation',
+        'label' => 'Навигация по страниците',
 
-        'overview' => '{1} Показване на 1 резултат|[2,*] Показване на :first to :last of :total резултати',
+        'overview' => '{1} Показване на 1 резултат|[2,*] Показване на :first до :last от :total резултати',
 
         'fields' => [
 
@@ -54,7 +54,7 @@ return [
         'buttons' => [
 
             'go_to_page' => [
-                'label' => 'Отиди на страница :page',
+                'label' => 'Отидете на страница :page',
             ],
 
             'next' => [
@@ -72,11 +72,11 @@ return [
     'buttons' => [
 
         'disable_reordering' => [
-            'label' => 'Завърши организацията на записите',
+            'label' => 'Завършете организацията на записите',
         ],
 
         'enable_reordering' => [
-            'label' => 'Реорганизирай записите',
+            'label' => 'Реорганизирайте записите',
         ],
 
         'filter' => [
@@ -84,7 +84,7 @@ return [
         ],
 
         'open_actions' => [
-            'label' => 'Отвори действията',
+            'label' => 'Отворете действията',
         ],
 
         'toggle_columns' => [
@@ -100,7 +100,7 @@ return [
         'buttons' => [
 
             'reset_column_searches' => [
-                'label' => 'Изчисти търсенето на колони',
+                'label' => 'Изчистете търсенето на колони',
             ],
 
         ],
@@ -112,12 +112,12 @@ return [
         'buttons' => [
 
             'remove' => [
-                'label' => 'Премахни филтър',
+                'label' => 'Премахнете филтър',
             ],
 
             'remove_all' => [
-                'label' => 'Премахни всички филтри',
-                'tooltip' => 'Премахни всички филтри',
+                'label' => 'Премахнете всички филтри',
+                'tooltip' => 'Премахнете всички филтри',
             ],
 
             'reset' => [
@@ -154,16 +154,16 @@ return [
 
     'selection_indicator' => [
 
-        'selected_count' => 'Избран 1 запис.|:count records selected.',
+        'selected_count' => 'Избран 1 запис.|:count записа са избрани.',
 
         'buttons' => [
 
             'select_all' => [
-                'label' => 'Селектирай всички :count',
+                'label' => 'Селектирайте всички :count',
             ],
 
             'deselect_all' => [
-                'label' => 'Deselect all',
+                'label' => 'Деселектирайте всички',
             ],
 
         ],
@@ -175,7 +175,7 @@ return [
         'fields' => [
 
             'column' => [
-                'label' => 'Сортирай по',
+                'label' => 'Сортирайте по',
             ],
 
             'direction' => [

@@ -4,7 +4,7 @@ return [
 
     'builder' => [
 
-        'collapsed' => 'Content collapsed',
+        'collapsed' => 'Съдържанието е свито',
 
         'buttons' => [
 
@@ -107,64 +107,64 @@ return [
     'markdown_editor' => [
 
         'toolbar_buttons' => [
-            'attach_files' => 'Attach files',
-            'bold' => 'Bold',
-            'bullet_list' => 'Bullet list',
-            'code_block' => 'Code block',
-            'edit' => 'Edit',
-            'italic' => 'Italic',
-            'link' => 'Link',
-            'ordered_list' => 'Numbered list',
-            'preview' => 'Preview',
-            'strike' => 'Strikethrough',
+            'attach_files' => 'Прикачи файлове',
+            'bold' => 'Удебелен',
+            'bullet_list' => 'Списък',
+            'code_block' => 'Кодов блок',
+            'edit' => 'Редактирай',
+            'italic' => 'Курсив',
+            'link' => 'Връзка',
+            'ordered_list' => 'Номериран списък',
+            'preview' => 'Преглед',
+            'strike' => 'Зачертано',
         ],
 
     ],
 
     'repeater' => [
 
-        'collapsed' => 'Content collapsed',
+        'collapsed' => 'Съдържанието е свито',
 
         'buttons' => [
 
             'create_item' => [
-                'label' => 'Add to :label',
+                'label' => 'Добави към :label',
             ],
 
             'delete_item' => [
-                'label' => 'Delete',
+                'label' => 'Изтрий',
             ],
 
             'clone_item' => [
-                'label' => 'Clone',
+                'label' => 'Клонирай',
             ],
 
             'move_item' => [
-                'label' => 'Move',
+                'label' => 'Премести',
             ],
 
             'move_item_down' => [
-                'label' => 'Move down',
+                'label' => 'Премести надолу',
             ],
 
             'move_item_up' => [
-                'label' => 'Move up',
+                'label' => 'Премести нагоре',
             ],
 
             'collapse_item' => [
-                'label' => 'Collapse',
+                'label' => 'Свий',
             ],
 
             'expand_item' => [
-                'label' => 'Expand',
+                'label' => 'Разшири',
             ],
 
             'collapse_all' => [
-                'label' => 'Collapse all',
+                'label' => 'Свий всичко',
             ],
 
             'expand_all' => [
-                'label' => 'Expand all',
+                'label' => 'Разшири всичко',
             ],
 
         ],
@@ -178,20 +178,20 @@ return [
             'link' => [
 
                 'buttons' => [
-                    'link' => 'Link',
-                    'unlink' => 'Unlink',
+                    'link' => 'Свържи',
+                    'unlink' => 'Прекратете връзката',
                 ],
 
                 'label' => 'URL',
 
-                'placeholder' => 'Enter a URL',
+                'placeholder' => 'Въведи URL',
 
             ],
 
         ],
 
         'toolbar_buttons' => [
-            'attach_files' => 'Attach files',
+            'attach_files' => 'Прикачи файлове',
             'blockquote' => 'Blockquote',
             'bold' => 'Bold',
             'bullet_list' => 'Bullet list',
@@ -217,12 +217,12 @@ return [
 
                 'modal' => [
 
-                    'heading' => 'Create',
+                    'heading' => 'Създай',
 
                     'actions' => [
 
                         'create' => [
-                            'label' => 'Create',
+                            'label' => 'Създай',
                         ],
 
                     ],
@@ -234,21 +234,21 @@ return [
         ],
 
         'boolean' => [
-            'true' => 'Yes',
-            'false' => 'No',
+            'true' => 'Да',
+            'false' => 'Не',
         ],
 
-        'loading_message' => 'Loading...',
+        'loading_message' => 'Зареждане...',
 
-        'max_items_message' => 'Only :count can be selected.',
+        'max_items_message' => 'Само :count могат да бъдат селектирани.',
 
-        'no_search_results_message' => 'No options match your search.',
+        'no_search_results_message' => 'Няма опции, отговарящи на вашето търсене.',
 
-        'placeholder' => 'Select an option',
+        'placeholder' => 'Избери опция',
 
-        'searching_message' => 'Searching...',
+        'searching_message' => 'Търсене...',
 
-        'search_prompt' => 'Start typing to search...',
+        'search_prompt' => 'Започнете да пишете, за да търсите...',
 
     ],
 
@@ -261,11 +261,11 @@ return [
         'buttons' => [
 
             'previous_step' => [
-                'label' => 'Back',
+                'label' => 'Назад',
             ],
 
             'next_step' => [
-                'label' => 'Next',
+                'label' => 'Следващ',
             ],
 
         ],

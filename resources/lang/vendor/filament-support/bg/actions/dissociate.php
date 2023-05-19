@@ -4,16 +4,16 @@ return [
 
     'single' => [
 
-        'label' => 'Dissociate',
+        'label' => 'Откъсване',
 
         'modal' => [
 
-            'heading' => 'Dissociate :label',
+            'heading' => 'Откъсване на :label',
 
             'actions' => [
 
                 'dissociate' => [
-                    'label' => 'Dissociate',
+                    'label' => 'Откъсване',
                 ],
 
             ],

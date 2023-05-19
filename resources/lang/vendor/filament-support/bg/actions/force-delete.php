@@ -45,7 +45,7 @@ return [
         ],
 
         'messages' => [
-            'deleted' => 'Deleted',
+            'deleted' => 'Изтрито',
         ],
 
     ],

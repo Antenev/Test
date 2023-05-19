@@ -31,8 +31,8 @@ return [
     ],
 
     'messages' => [
-        'failed' => 'These credentials do not match our records.',
-        'throttled' => 'Too many login attempts. Please try again in :seconds seconds.',
+        'failed' => 'Тези идентификационни данни не съответстват на нашите записи.',
+        'throttled' => 'Твърде много опити за влизане. Моля, опитайте отново след :seconds секунди.',
     ],
 
 ];
